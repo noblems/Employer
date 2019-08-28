@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Index</title>
 </head>
 <body>
-Welcome home
+Welcome home you are at emplotyer  home pager
 </body>
 </html>
