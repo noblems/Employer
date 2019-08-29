@@ -13,7 +13,7 @@ public class EmployeeController {
 	@RequestMapping(value="/employee",method=RequestMethod.GET)
 	public Employee greeting(@RequestParam(value="name", defaultValue="unknown") String name) {
 		//return new Employee(counter.incrementAndGet(),String.format(template, name));
-		return new Employee("noble","m",String.format(template, name));
+		return new Employee(12,String.format(template, name),121);
 	}
     @RequestMapping(method = RequestMethod.POST)
 

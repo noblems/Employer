@@ -1,7 +1,25 @@
 package employees;
 
 public class Employee {
-	private String firstName;
+	private int id;
+	private String name;
+	private int salary;
+	public Employee(int id, String name,int salary) {
+		this.id=id;
+		this.name=name;
+		this.salary=salary;
+		
+	}
+	public int getId() {
+		return this.id;
+	}
+	public String getName() {
+		return this.name;
+	}
+	public int getSalary() {
+		return this.salary;
+	}
+	/*private String firstName;
 	private String middleName;
 	private String lastName;
 	
@@ -21,13 +39,13 @@ public class Employee {
 	}public void setLastName(String lastName) {
 		this.lastName=lastName;
 	}*/
-	public String getMiddleName() {
+	/*public String getMiddleName() {
 		return this.middleName;
 	}
 	
 	public String getLastName() {
 		return this.lastName;
-	}
+	}*/
 	
 
 }
