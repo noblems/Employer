@@ -1,5 +1,7 @@
 employees\EmployeeController.class
+employees\EmployeeDao.class
 employees\Greeting.class
-employees\Employee.class
+employees\InsertTest.class
 employees\GreetingController.class
+employees\Employee.class
 employees\HelloController.class
