@@ -22,7 +22,7 @@ public class EmployeeController {
 	}
     @RequestMapping(value="/insert")
     public String insert() {
-    	Resource r=new ClassPathResource("applicationContext.xml");  
+    	Resource r=new ClassPathResource("./applicationContext.xml");  
         BeanFactory factory=new XmlBeanFactory(r);  
           
         EmployeeDao dao=(EmployeeDao)factory.getBean("d");  
