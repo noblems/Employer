@@ -20,7 +20,7 @@ public class EmployeeController {
 		//return new Employee(counter.incrementAndGet(),String.format(template, name));
 		return new Employee(12,String.format(template, name),121);
 	}
-    @RequestMapping(method = RequestMethod.POST,value="/insert")
+    @RequestMapping(value="/insert")
     public String insert() {
     	Resource r=new ClassPathResource("applicationContext.xml");  
         BeanFactory factory=new XmlBeanFactory(r);  
