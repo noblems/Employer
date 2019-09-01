@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Index</title>
+<title>Welcome</title>
 </head>
 <body>
-Welcome home you are at emplotyer  home pager
+<marquee>Welcome home you are at employer  home page</marquee>
+<h2>server working fine</h2>
 </body>
 </html>
