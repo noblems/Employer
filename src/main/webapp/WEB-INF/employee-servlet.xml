@@ -17,7 +17,7 @@
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
  
     <context:annotation-config />
-    <context:component-scan base-package="com.employeemanger.controller" />
+    <context:component-scan base-package="employees.controllers" />
  
     <bean id="jspViewResolver"
         class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -27,6 +27,11 @@
         <property name="suffix" value=".jsp" />
     </bean>
  
+    <bean id="messageSource"
+        class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basename" value="classpath:messages" />
+        <property name="defaultEncoding" value="UTF-8" />
+    </bean>
     <bean id="propertyConfigurer"
         class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
         p:location="/WEB-INF/jdbc.properties" />
@@ -55,8 +60,8 @@
         </property>
     </bean>
     
-    <bean id="employeeDAO" class="com.employeemanage.dao.EmployeeDaoImpl"></bean>
-    <bean id="employeeManager" class="com.employeemanage.service.EmployeeManagerImpl"></bean>
+    <bean id="employeeDAO" class="employees.dao.EmployeeDaoImpl"></bean>
+    <bean id="employeeManager" class="empoyees.service.EmployeeManagerImpl"></bean>
  
     <tx:annotation-driven />
     <bean id="transactionManager"
