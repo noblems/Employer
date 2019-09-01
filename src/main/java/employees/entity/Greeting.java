@@ -1,4 +1,4 @@
-package employees;
+package employees.entity;
 
 public class Greeting {
 
