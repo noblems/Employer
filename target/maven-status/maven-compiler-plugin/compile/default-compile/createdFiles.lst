@@ -1,3 +1,7 @@
-employees\controllers\HelloController.class
+employees\dao\EmployeeDAO.class
+employees\entity\EmployeeEntity.class
 employees\controllers\GreetingController.class
-employees\Greeting.class
+employees\entity\Greeting.class
+employees\controllers\EmployeeController.class
+employees\controllers\HelloController.class
+employees\dao\EmployeeDaoImpl.class

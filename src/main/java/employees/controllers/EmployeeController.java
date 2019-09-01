@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import employees.dao.EmployeeDAO;
 import employees.entity.EmployeeEntity;
-import employees.entity.Greeting;
 
 @RestController
 public class EmployeeController {
