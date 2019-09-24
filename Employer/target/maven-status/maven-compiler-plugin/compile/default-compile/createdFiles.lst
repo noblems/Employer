@@ -1,8 +1,10 @@
-employees\EmployeeController.class
 employees\EmployeeDao.class
 employees\Greeting.class
+employees\entity\Note.class
+employees\repositories\NoteRepository.class
+employees\controllers\NoteController.class
+employees\HelloController.class
+employees\EmployeeController.class
 employees\InsertTest.class
 employees\GreetingController.class
-employees\EmployeeMarshaller.class
 employees\Employee.class
-employees\HelloController.class
