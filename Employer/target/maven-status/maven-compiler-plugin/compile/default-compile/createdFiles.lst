@@ -3,5 +3,6 @@ employees\EmployeeDao.class
 employees\Greeting.class
 employees\InsertTest.class
 employees\GreetingController.class
+employees\EmployeeMarshaller.class
 employees\Employee.class
 employees\HelloController.class

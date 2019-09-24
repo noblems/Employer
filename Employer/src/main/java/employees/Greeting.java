@@ -1,11 +1,16 @@
 package employees;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+@JacksonXmlRootElement(localName = "Greeting")
 public class Greeting {
-
+	@JacksonXmlProperty 
     private final long id;
+	@JacksonXmlProperty 
     private final String content;
+	@JacksonXmlProperty 
     private String message;
-
+    
     public Greeting(long id, String content) {
         this.id = id;
         this.content = content;
