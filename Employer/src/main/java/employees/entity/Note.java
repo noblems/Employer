@@ -22,6 +22,9 @@ public class Note implements Serializable {
 
     @NotBlank
     private String title;
+    public Note(String title) {
+    	this.title=title;
+    }
 
     /*@NotBlank
     private String content;
