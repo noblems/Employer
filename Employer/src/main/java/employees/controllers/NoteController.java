@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import employees.EmployeeDao;
 import employees.entity.Note;
+import employees.repositories.BookCrudRepository;
 import employees.repositories.NoteRepository;
 
 import javax.validation.Valid;
@@ -17,17 +18,18 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 public class NoteController {
-	Resource r=new ClassPathResource("applicationContext.xml");  
-    BeanFactory factory=new XmlBeanFactory(r);  
+	//Resource r=new ClassPathResource("applicationContext.xml");  
+    //BeanFactory factory=new XmlBeanFactory(r);  
       
-    NoteRepository noteRepository=(NoteRepository)factory.getBean("noteRepository");
-    //@Autowired
+   // NoteRepository noteRepository=(NoteRepository)factory.getBean("noteRepository");
+    @Autowired
+    private BookCrudRepository brc;
    // private NoteRepository noteRepository;
 
     // Get All Notes
     @GetMapping("/notes")
     public List<Note> getAllNotes() {
-        return noteRepository.findAll();
+        return (List<Note>) brc.findAll();
     }
     // Create a new Note
 
