@@ -22,14 +22,18 @@ public class NoteController {
     //BeanFactory factory=new XmlBeanFactory(r);  
       
    // NoteRepository noteRepository=(NoteRepository)factory.getBean("noteRepository");
-    @Autowired
-    private BookCrudRepository brc;
-   // private NoteRepository noteRepository;
+   
+    //private BookCrudRepository brc;
+    private NoteRepository noteRepository;
+   // @Autowired
+  //  public void setNoteRepository(NoteRepository noteRepository){
+   //     this.noteRepository=noteRepository;
+   // }
 
     // Get All Notes
     @GetMapping("/notes")
     public List<Note> getAllNotes() {
-        return (List<Note>) brc.findAll();
+        return (List<Note>) noteRepository.findAll();
     }
     // Create a new Note
 

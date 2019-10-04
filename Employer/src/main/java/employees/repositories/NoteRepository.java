@@ -7,8 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import employees.entity.Note;
 
-
 @Repository
 public interface NoteRepository extends JpaRepository<Note, Long> {
-	List<Note> findByName(String name);
+	//List<Note> findByAll(String name);
 }
