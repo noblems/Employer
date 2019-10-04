@@ -8,11 +8,11 @@ import domain.Users;
 import mappers.UsersMappers;
 
 public class UserService {
-	public void insertUser(Users user) {
+	public void insertUsers(Users user) {
 		  SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
 		  try{
 		  UsersMappers userMapper = sqlSession.getMapper(UsersMappers.class);
-		  userMapper.insertUser(user);
+		  userMapper.insertUsers(user);
 		  sqlSession.commit();
 		  }finally{
 		   sqlSession.close();
@@ -23,7 +23,7 @@ public class UserService {
 		  SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
 		  try{
 		  UsersMappers userMapper = sqlSession.getMapper(UsersMappers.class);
-		  return userMapper.getUserById(userId);
+		  return userMapper.getUsersById(userId);
 		  }finally{
 		   sqlSession.close();
 		  }
@@ -43,7 +43,7 @@ public class UserService {
 		  SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
 		  try{
 		  UsersMappers userMapper = sqlSession.getMapper(UsersMappers.class);
-		  userMapper.updateUser(user);
+		  userMapper.updateUsers(user);
 		  sqlSession.commit();
 		  }finally{
 		   sqlSession.close();
@@ -55,7 +55,7 @@ public class UserService {
 		  SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
 		  try{
 		  UsersMappers userMapper = sqlSession.getMapper(UsersMappers.class);
-		  userMapper.deleteUser(userId);
+		  userMapper.deleteUsers(userId);
 		  sqlSession.commit();
 		  }finally{
 		   sqlSession.close();

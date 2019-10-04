@@ -1,5 +1,6 @@
 package employees.service;
 
+import mappers.UsersMappers;
 import java.io.IOException;
 import java.io.Reader;
 
@@ -11,21 +12,22 @@ public class MyBatisUtil {
 	private static SqlSessionFactory factory;
 	 
 	 private MyBatisUtil() {
+	 
+	 
+	 
 	 }
 	 
-	 static
-	 {
-	  Reader reader = null;
-	  try {
-	   reader = Resources.getResourceAsReader("mybatis-config.xml");
-	  } catch (IOException e) {
-	   throw new RuntimeException(e.getMessage());
-	  }
-	  factory = new SqlSessionFactoryBuilder().build(reader);
-	 }
 	 
 	 public static SqlSessionFactory getSqlSessionFactory() 
 	 {
-	  return factory;
+		 Reader reader = null;
+		  try {
+		   reader = Resources.getResourceAsReader("mybatis-config.xml");
+		  } catch (IOException e) {
+		   throw new RuntimeException(e.getMessage());
+		  }
+		  factory = new SqlSessionFactoryBuilder().build(reader);
+		  //factory.getConfiguration().addMapper(UsersMappers.class);
+		  return factory;
 	 }
 }

@@ -10,7 +10,9 @@ public class Greeting {
     private final String content;
 	@JacksonXmlProperty 
     private String message;
-    
+    public Greeting() {
+    	
+    }
     public Greeting(long id, String content) {
         this.id = id;
         this.content = content;

@@ -9,7 +9,9 @@ import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,8 +30,16 @@ public class GreetingController {
     	
         return new Greeting(counter.incrementAndGet(),String.format(template, name));
     }
-    @RequestMapping(value="/insert",produces=MediaType.APPLICATION_XML_VALUE)
-    public Greeting insert(@RequestParam(value="name", defaultValue="done") String name) throws IOException {
+    
+    
+    @RequestMapping(value="/greetingin",method=RequestMethod.POST,consumes=MediaType.APPLICATION_XML_VALUE)
+    public void receive(@RequestBody Greeting greeting) throws IOException {
+    	System.out.print(greeting);
+        //return "done";
+    }
+    
+    @RequestMapping(value="/insertmy")
+    public String insertmy(@RequestParam(value="name", defaultValue="done") String name) throws IOException {
     	userService = new UserService();
     	Users user = new Users();
 	     user.setEmailId("test_email_"+System.currentTimeMillis()+"@gmail.com");
@@ -37,8 +47,8 @@ public class GreetingController {
 	     user.setFirstName("TestFirstName");
 	     user.setLastName("TestLastName");
 	 
-	     userService.insertUser(user);
-        return new Greeting(counter.incrementAndGet(),String.format(template, name));
+	     userService.insertUsers(user);
+        return "done";
     }
     
 }
